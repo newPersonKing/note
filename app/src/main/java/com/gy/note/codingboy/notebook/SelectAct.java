@@ -1,12 +1,10 @@
-package com.gy.note.codingboy.notebook1;
+package com.gy.note.codingboy.notebook;
 
 import android.app.Activity;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.gy.note.R;

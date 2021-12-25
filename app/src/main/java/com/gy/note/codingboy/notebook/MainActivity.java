@@ -1,16 +1,11 @@
-package com.gy.note.codingboy.notebook1;
+package com.gy.note.codingboy.notebook;
 
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
@@ -26,6 +21,7 @@ public class MainActivity extends AppCompatActivity
     private NotesDB notesDB;
     private SQLiteDatabase dbReader;
     private Cursor cursor;
+    private Button btn_user_info;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +29,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         addbtn=(Button)findViewById(R.id.add);
         lv=(ListView)findViewById(R.id.list);
+
+        btn_user_info = findViewById(R.id.btn_user_info);
         notesDB=new NotesDB(this);
         dbReader=notesDB.getReadableDatabase();
 
@@ -50,6 +48,14 @@ public class MainActivity extends AppCompatActivity
                 Intent intent=new Intent(MainActivity.this,SelectAct.class);
                 intent.putExtra(NotesDB.ID,cursor.getInt(cursor.getColumnIndex(NotesDB.ID)));
                 intent.putExtra(NotesDB.CONTENT,cursor.getString(cursor.getColumnIndex(NotesDB.CONTENT)));
+                startActivity(intent);
+            }
+        });
+
+        btn_user_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,UserInfoActivity.class);
                 startActivity(intent);
             }
         });

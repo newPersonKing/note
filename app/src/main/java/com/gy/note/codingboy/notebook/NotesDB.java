@@ -1,4 +1,4 @@
-package com.gy.note.codingboy.notebook1;
+package com.gy.note.codingboy.notebook;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -18,6 +18,7 @@ public class NotesDB extends SQLiteOpenHelper
             +ID+" INTEGER PRIMARY KEY AUTOINCREMENT,"
             +CONTENT+" TEXT NOT NULL,"
             +TIME+" TEXT NOT NULL)";
+
     public NotesDB(Context context)
     {
         super(context,"notes",null,1);

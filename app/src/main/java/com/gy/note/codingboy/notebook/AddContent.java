@@ -1,4 +1,4 @@
-package com.gy.note.codingboy.notebook1;
+package com.gy.note.codingboy.notebook;
 
 import android.app.Activity;
 import android.content.ContentValues;

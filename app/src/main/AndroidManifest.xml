@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".codingboy.notebook1.MainActivity">
+        <activity android:name=".codingboy.notebook.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,8 +17,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".codingboy.notebook1.AddContent"/>
-        <activity android:name=".codingboy.notebook1.SelectAct"/>
+        <activity android:name=".codingboy.notebook.AddContent"/>
+        <activity android:name=".codingboy.notebook.SelectAct"/>
+        <activity android:name=".codingboy.notebook.MainActivity"/>
+        <activity android:name=".codingboy.notebook.UserInfoActivity"/>
     </application>
 
 </manifest>
